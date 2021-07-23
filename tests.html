@@ -3,36 +3,158 @@
 <head>
     <meta charset="utf-8">
     <title>般若心経を読んでもらう</title>
+    <style>
+      .read-text{
+       color:red;font-weight:bold;
+      } 
+    </style>
 </head>
+
 <body>
-  <button id="UT">般若心経を読む</button>
-  （ブラウザの標準機能による読み上げですので、時々ちょっと間違えます）
+  <button id="UT">般若心経をブラウザが読む</button>
+  （Webブラウザの標準機能による読み上げですので、時々ちょっと間違えます）
+<div style="width:70%;padding:50px">
+  <h2><span class="textfr title">
+    仏説摩訶般若波羅蜜多心経</span></h2>
+<span class="textfr textbody">  
+  観自在菩薩
+</span><span class="textfr textbody">    
+  行深般若波羅蜜多時
+</span><span class="textfr textbody">    
+  照見五蘊皆空
+</span><span class="textfr textbody">  
+  度一切苦厄
+</span><span class="textfr textbody">    
+  舎利子
+</span><span class="textfr textbody">  
+  色不異空
+</span><span class="textfr textbody" data-r="くうふいしき">  
+  空不異色
+</span><span class="textfr textbody">  
+  色即是空
+</span><span class="textfr textbody">  
+  空即是色
+</span><span class="textfr textbody">
+  受想行識
+</span><span class="textfr textbody" data-r="やくぶにょぜ">      
+  亦復如是
+</span><span class="textfr textbody">    
+  舎利子
+</span><span class="textfr textbody" data-r="ぜしょほうくうそう">
+  是諸法空相
+</span><span class="textfr textbody">  
+  不生不滅
+</span><span class="textfr textbody">  
+  不垢不浄
+</span><span class="textfr textbody">  
+  不増不減
+</span><span class="textfr textbody" data-r="ぜこくうちゅう">    
+  是故空中
+</span><span class="textfr textbody" data-r="むしき">    
+  無色
+</span><span class="textfr textbody">  
+  無受想行識
+</span><span class="textfr textbody">  
+  無眼耳鼻舌身意
+</span><span class="textfr textbody">    
+  無色声香味触法
+</span><span class="textfr textbody">  
+  無眼界
+</span><span class="textfr textbody">  
+  乃至無意識界
+</span><span class="textfr textbody">    
+  無無明亦
+</span><span class="textfr textbody">  
+  無無明尽
+</span><span class="textfr textbody">  
+  乃至無老死
+</span><span class="textfr textbody">  
+  亦無老死尽
+</span><span class="textfr textbody">  
+  無苦集滅道
+</span><span class="textfr textbody">    
+  無智亦無得
+</span><span class="textfr textbody">  
+  以無所得故
+</span><span class="textfr textbody">  
+  菩提薩埵
+</span><span class="textfr textbody">
+  依般若波羅蜜多故
+</span><span class="textfr textbody">    
+  心無罣礙
+</span><span class="textfr textbody">  
+  無罣礙故
+</span><span class="textfr textbody">  
+  無有恐怖
+</span><span class="textfr textbody">  
+  遠離一切顛倒夢想
+</span><span class="textfr textbody">  
+  究竟涅槃
+</span><span class="textfr textbody">
+  三世諸仏
+</span><span class="textfr textbody">  
+  依般若波羅蜜多故
+</span><span class="textfr textbody">
+  得阿耨多羅三藐三菩提
+</span><span class="textfr textbody">  
+  故知般若波羅蜜多
+</span><span class="textfr textbody">    
+  是大神呪
+</span><span class="textfr textbody">    
+  是大明呪
+</span><span class="textfr textbody">    
+  是無上呪
+</span><span class="textfr textbody">    
+  是無等等呪
+</span><span class="textfr textbody">  
+  能除一切苦
+</span><span class="textfr textbody">  
+  真実不虚
+</span><span class="textfr textbody">  
+  故説般若波羅蜜多呪
+</span><span class="textfr textbody">    
+  即説呪曰
+</span><span class="textfr textbody">    
+  羯諦
+</span><span class="textfr textbody">  
+  羯諦
+</span><span class="textfr textbody">  
+  波羅羯諦
+</span><span class="textfr textbody">    
+  波羅僧羯諦菩提薩婆訶
+</span><span class="textfr textbody">    
+般若心経
+</span>
+</div>  
       <script>
       var button_ut = document.querySelector('#UT');
+      var text_frs = document.querySelectorAll('.textfr');
       button_ut.addEventListener('click', function () {
-      var artext = [
-       '仏説摩訶般若波羅蜜多心経観自在菩薩行深般若波羅蜜多時',
-       '照見五蘊皆空度一切苦厄',
-       '舎利子色不異空空不異色色即是空空即是色受想行識亦復如是',     
-       '舎利子是諸法空相　不生不滅不垢不浄不増不減是故空中',
-       '無色無受想行識無眼耳鼻舌身意、無色声香味触法無眼界乃至無意識界',
-       '無無明亦無無明尽乃至無老死亦無老死尽無苦集滅道',
-       '無智亦無得以無所得故菩提薩埵依般若波羅蜜多故',
-       '心無罣礙無罣礙故無有恐怖遠離一切顛倒夢想究竟涅槃',
-       '三世諸仏依般若波羅蜜多故　得阿耨多羅三藐三菩提故知般若波羅蜜多',
-       '是大神呪是大明呪是無上呪是無等等呪能除一切苦真実不虚故説般若波羅蜜多呪',
-       '即説呪曰',
-       '羯諦羯諦波羅羯諦波羅僧羯諦菩提薩婆訶',
-       '般若心経'
-       ];
-       artext.forEach(function(e){
+       text_frs.forEach(function(e){
          var ut = new SpeechSynthesisUtterance();
-         ut.text = e;
+         if(e.getAttribute("data-r") == undefined){
+           ut.text = e.textContent;
+         }
+         else{
+           ut.text = e.getAttribute("data-r");
+         }      
          ut.lang='ja-JP';
          ut.rate = 1.4;
          speechSynthesis.speak(ut);
+         ut.onstart = function(){
+           e.classList.add('read-text');
+         }
+         ut.onend = function(){
+           clearClasses();
+         }
        });
       });
+      function clearClasses(){
+        var text_frs = document.querySelectorAll('.textfr');
+        text_frs.forEach(function(e2){
+          e2.classList.remove('read-text');         
+        });      
+      }
     </script>
 </body>
 </html>
