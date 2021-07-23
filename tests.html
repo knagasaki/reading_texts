@@ -145,16 +145,10 @@
            e.classList.add('read-text');
          }
          ut.onend = function(){
-           clearClasses();
+           e.classList.remove('read-text');      
          }
        });
       });
-      function clearClasses(){
-        var text_frs = document.querySelectorAll('.textfr');
-        text_frs.forEach(function(e2){
-          e2.classList.remove('read-text');         
-        });      
-      }
     </script>
 </body>
 </html>
